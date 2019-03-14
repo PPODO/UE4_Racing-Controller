@@ -34,3 +34,12 @@ void AHANSEI_CONTROLLERGameModeBase::StartSender(const FString& IP) {
 		bIsConnected = m_Sender->StartUDPSender("Sender Socket", IP);
 	}
 }
+
+void AHANSEI_CONTROLLERGameModeBase::SetMotionData(bool PressedHand, bool PressedAcc) {
+	m_MotionData.bIsPressedHandBreak = PressedHand;
+	m_MotionData.bIsPressedAcc = PressedAcc;
+}
+
+void AHANSEI_CONTROLLERGameModeBase::SetValue(float f) {
+	Value = f;
+}
